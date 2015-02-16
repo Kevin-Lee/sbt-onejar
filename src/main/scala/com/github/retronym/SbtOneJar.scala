@@ -25,7 +25,7 @@ object SbtOneJar extends Plugin {
     },
     baseDirectory in oneJarRedist <<= (target)(_ / "one-jar-redist"),
     oneJarRedist <<= (baseDirectory in oneJarRedist).map { (base) =>
-      val oneJarResourceName = "one-jar-boot-0.97-ex1.jar"
+      val oneJarResourceName = "one-jar-boot-0.97-ex2.jar"
       val s = getClass.getClassLoader.getResourceAsStream(oneJarResourceName)
       if (s == null) sys.error("could not load: " + oneJarResourceName)
       def include(path: String) = path match {
