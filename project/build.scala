@@ -23,7 +23,7 @@ object build extends Build {
     base = file("."),
     settings = Defaults.defaultSettings ++ ScriptedPlugin.scriptedSettings ++ Seq[Project.Setting[_]](
       organization := "org.scala-sbt.plugins",
-      version := "0.8.1",
+      version := "0.8.2",
       sbtPlugin := true,
       scalacOptions in Compile ++= Seq("-deprecation"),
       publishTo <<= version { (v: String) =>
